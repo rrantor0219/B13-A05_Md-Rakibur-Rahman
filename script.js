@@ -119,7 +119,15 @@ document.getElementById("issueModal").style.display="none";
 // load automatically
 
 if(window.location.pathname.includes("index.html")){
+
+const loggedIn = localStorage.getItem("loggedIn");
+
+if(!loggedIn){
+window.location.href = "login.html";
+}else{
 loadIssues();
+}
+
 }
 function showLoading(show){
 
