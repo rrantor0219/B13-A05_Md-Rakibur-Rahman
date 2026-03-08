@@ -129,3 +129,20 @@ grid-template-columns:repeat(4,1fr);
 gap:20px;
 padding:20px;
 }
+/* issue card */
+
+.card{
+background:white;
+padding:15px;
+border-radius:8px;
+cursor:pointer;
+border-top:5px solid transparent;
+}
+
+.card.open{
+border-top:5px solid green;
+}
+
+.card.closed{
+border-top:5px solid purple;
+}
