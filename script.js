@@ -15,16 +15,36 @@ function loginUser(){
 }
 // load issues
 
-const apiURL = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
-
-async function loadIssues(){
+async function loadIssues(type="all"){
 
 const res = await fetch(apiURL);
 const data = await res.json();
 
-displayIssues(data.data);
+let issues = data.data;
+
+if(type === "open"){
+issues = issues.filter(issue => issue.status === "open");
+}
+
+if(type === "closed"){
+issues = issues.filter(issue => issue.status === "closed");
+}
+
+displayIssues(issues);
 
 }
+function changeTab(type,element){
+
+const tabs = document.querySelectorAll(".tab");
+
+tabs.forEach(tab => tab.classList.remove("active"));
+
+element.classList.add("active");
+
+loadIssues(type);
+
+}
+
 
 // display cards
 
