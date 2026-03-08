@@ -17,6 +17,8 @@ function loginUser(){
 
 async function loadIssues(type="all"){
 
+showLoading(true);
+
 const res = await fetch(apiURL);
 const data = await res.json();
 
@@ -31,6 +33,8 @@ issues = issues.filter(issue => issue.status === "closed");
 }
 
 displayIssues(issues);
+
+showLoading(false);
 
 }
 function changeTab(type,element){
@@ -113,4 +117,32 @@ document.getElementById("issueModal").style.display="none";
 
 if(window.location.pathname.includes("index.html")){
 loadIssues();
+}
+function showLoading(show){
+
+const loading = document.getElementById("loading");
+
+if(show){
+loading.style.display = "block";
+}else{
+loading.style.display = "none";
+}
+
+}
+async function searchIssues(){
+
+const text = document.getElementById("searchInput").value;
+
+if(!text) return;
+
+showLoading(true);
+
+const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${text}`);
+
+const data = await res.json();
+
+displayIssues(data.data);
+
+showLoading(false);
+
 }

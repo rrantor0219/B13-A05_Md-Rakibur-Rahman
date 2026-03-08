@@ -42,7 +42,7 @@
 
 <div class="search-box">
 <input id="searchInput" type="text" placeholder="Search issues...">
-<button>Search</button>
+<button onclick="searchIssues()">Search</button>
 </div>
 
 </nav>
@@ -75,8 +75,10 @@
 
 </div>
 
-<!-- Issues Grid -->
+<!-- Loading -->
+<div id="loading" class="loading">Loading...</div>
 
+<!-- Issues Grid -->
 <div id="issuesContainer" class="grid"></div>
 
 <script src="script.js"></script>
