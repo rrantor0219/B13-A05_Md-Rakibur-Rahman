@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>GitHub Issues Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="logo-box">
+<img src="assets/github-logo.png">
+<h3>GitHub Issues Tracker</h3>
+</div>
+
+<div class="search-box">
+<input id="searchInput" type="text" placeholder="Search issues...">
+<button onclick="searchIssues()">Search</button>
+</div>
+
+</nav>
+
+
+<!-- Tabs -->
+
+<div class="tabs">
+
+<button class="tab active" onclick="changeTab('all',this)">All</button>
+<button class="tab" onclick="changeTab('open',this)">Open</button>
+<button class="tab" onclick="changeTab('closed',this)">Closed</button>
+
+</div>
+
+
+<!-- Issue Header -->
+
+<div class="issue-header">
+
+<div class="left">
+<img src="assets/Aperture.png">
+<h3>Issues</h3>
+</div>
+
+<div class="right">
+<img src="assets/Open-Status.png">
+<span>Open</span>
+
+<img src="assets/closed- status .png">
+<span>Closed</span>
+</div>
+
+</div>
+
+
+<!-- Loading -->
+<div id="loading" class="loading">Loading...</div>
+
+
+<!-- Issues Grid -->
+<div id="issuesContainer" class="grid"></div>
+
+
 <!-- Issue Modal -->
 
 <div id="issueModal" class="modal">
@@ -28,58 +87,6 @@
 
 </div>
 
-
-<body>
-
-<!-- Navbar -->
-
-<nav class="navbar">
-
-<div class="logo-box">
-<img src="assets/github-logo.png">
-<h3>GitHub Issues Tracker</h3>
-</div>
-
-<div class="search-box">
-<input id="searchInput" type="text" placeholder="Search issues...">
-<button onclick="searchIssues()">Search</button>
-</div>
-
-</nav>
-
-<!-- Tabs -->
-
-<div class="tabs">
-
-<button class="tab active" onclick="changeTab('all',this)">All</button>
-<button class="tab" onclick="changeTab('open',this)">Open</button>
-<button class="tab" onclick="changeTab('closed',this)">Closed</button>
-</div>
-
-<!-- Issue Header -->
-
-<div class="issue-header">
-
-<div class="left">
-<img src="assets/Aperture.png">
-<h3>Issues</h3>
-</div>
-
-<div class="right">
-<img src="assets/Open-Status.png">
-<span>Open</span>
-
-<img src="assets/Closed-Status.png">
-<span>Closed</span>
-</div>
-
-</div>
-
-<!-- Loading -->
-<div id="loading" class="loading">Loading...</div>
-
-<!-- Issues Grid -->
-<div id="issuesContainer" class="grid"></div>
 
 <script src="script.js"></script>
 
