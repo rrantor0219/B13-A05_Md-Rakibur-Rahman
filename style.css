@@ -1,0 +1,57 @@
+/* basic page style */
+body{
+    font-family: Arial, sans-serif;
+    background:#f3f4f6;
+    margin:0;
+}
+
+/* center login page */
+.login-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* login card */
+.login-card{
+    background:white;
+    width:350px;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* logo */
+.logo{
+    width:60px;
+    margin-bottom:10px;
+}
+
+/* inputs */
+.login-card input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:6px;
+}
+
+/* button */
+.login-card button{
+    width:100%;
+    padding:10px;
+    background:#5b21b6;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* demo credentials */
+.demo{
+    margin-top:15px;
+    font-size:14px;
+    color:#555;
+}
