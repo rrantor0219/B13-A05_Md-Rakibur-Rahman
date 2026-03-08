@@ -1,129 +1,86 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
+# GitHub Issues Tracker
 
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
-
----
-
-# Assignment-05: GitHub Issues Tracker
-
-
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
-
-
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
-
-
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
-
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
+This project is a simple GitHub Issues Tracker built using **HTML, CSS, and Vanilla JavaScript**.
+It loads issues from an API and displays them in cards. Users can filter issues, search for issues, and click on a card to see more details in a modal.
 
 ---
 
-## 📝 Main Requirements
+## 1️⃣ Difference between var, let, and const
 
-## 🎨 Design Part
+`var`, `let`, and `const` are used to declare variables in JavaScript.
 
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
+`var` is the older way to create variables. It has function scope and can also be redeclared. Because of this it can sometimes create unexpected behavior.
 
-## Main Page: 
+`let` is a newer way to declare variables. It has block scope and its value can be changed later, but it cannot be redeclared in the same block.
 
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status 
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
+`const` is used when the value should not change after it is assigned. Once a value is set, it cannot be reassigned. I usually use `const` when I know the value should stay the same.
 
 ---
 
-## 🛠️ Technology Stack
+## 2️⃣ What is the spread operator (...)
 
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
+The spread operator is written using three dots `...`. It is used to expand elements from an array or object.
 
----
+For example, we can copy an array or combine arrays easily using the spread operator.
 
-## 🔑 Demo Credentials
+Example:
 
-```text
-Username: admin
-Password: admin123
+```javascript
+const numbers = [1,2,3];
+const newNumbers = [...numbers,4];
 ```
 
+This creates a new array that includes the elements from the first array plus another value.
 
 ---
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+## 3️⃣ Difference between map(), filter(), and forEach()
 
+These are all array methods but they are used for different purposes.
 
-## 📤 What to submit
+`map()` is used when we want to create a new array by transforming each item of the original array.
 
-- **GitHub Repository Link:**
-- **Live Site Link:**
+`filter()` is used when we want to return only the elements that match a certain condition.
+
+`forEach()` simply loops through the array and runs a function for each element, but it does not return a new array.
 
 ---
 
+## 4️⃣ What is an arrow function
 
-# B13-A05_Md-Rakibur-Rahman
+An arrow function is a shorter way to write a function in JavaScript. It uses the `=>` syntax.
+
+Example:
+
+```javascript
+const add = (a, b) => {
+  return a + b;
+}
+```
+
+Arrow functions help make the code shorter and cleaner, especially for small functions.
+
+---
+
+## 5️⃣ What are template literals
+
+Template literals are used to create strings more easily in JavaScript. They use backticks `` ` ` ` instead of quotes.
+
+The main advantage is that we can insert variables inside the string using `${}`.
+
+Example:
+
+```javascript
+const name = "Rakib";
+console.log(`Hello ${name}`);
+```
+
+This makes it easier than combining strings using the `+` operator.
+
+---
+
+##  Live Project
+
+GitHub Repository: https://github.com/rrantor0219/B13-A05_Md-Rakibur-Rahman
+
+Live Site: https://rrantor0219.github.io/B13-A05_Md-Rakibur-Rahman/
