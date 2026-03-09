@@ -156,3 +156,7 @@ displayIssues(data.data);
 showLoading(false);
 
 }
+function logout(){
+localStorage.removeItem("loggedIn");
+window.location.href = "login.html";
+}
